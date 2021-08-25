@@ -19,6 +19,7 @@ function App() {
   let good = RegExp("(GOOD|GUD|HAPPY|HAPY)");
   let password = RegExp("(PASSWORD|PASWORD|PASSWOR|PASWOR)");
   let accountData = RegExp("(NAME|FULL NAME|FULLNAME|IDENTIFICATION|NUMBER|DNI|BIRTH|DATE|ADDRESS|CARD|CVU)");
+  let walletCard = RegExp("(WALLET CARD|CARD WALLET|WALLETCARD|CARDWALLET)");
   let deletee= /DELETE/;
   let account = RegExp("(ACCOUNT|ACOUNT|ACCOUNTT|ACONT|ACUNT)");
   let transfer = RegExp("(TRANSFER|TRANFER|TRANSFERS|TRANFERS|SEND TO|SEND MONEY|TRANSFERENCE|TRANFERENCE)");
@@ -39,6 +40,13 @@ function App() {
     e.preventDefault()
     if(text.length<1) {
       setAnswer('Please write something so that I can help you.');
+      setAvatar(avatarPokerface);
+    }
+    if(walletCard.test(text)) {
+      let answer = <p> wallet card is a prepaid card that you can use like a <br/>
+        credit card. You just need to go to the <a href='/walletcard'> WALLET CARD </a> section <br/>
+        and use the data that appears on the screen.</p> 
+      setAnswer(answer);
       setAvatar(avatarPokerface);
     }
     else if(deletee.test(text) && account.test(text)) {
