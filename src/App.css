@@ -3,5 +3,66 @@
 }
 
 img{
-  width: 15rem;
+  width: 5rem;
+  border-radius: 10rem;
+	border: none;
+}
+
+input{
+  width: 37rem;
+}
+
+/* CSS CHATBOT */
+
+.contentWrap{
+	/* min-width: 16rem; */
+  position: relative;
+	height: 25rem;
+	width: 40rem;
+	margin-top: 0rem;
+	border: none;
+	box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+	transition: all 0.2s;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+	font-family: "Roboto", sans-serif;
+	color: rgb(0, 0, 0);
+}
+
+.contenWrap:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+  }
+
+.bodyChat{
+  height: 35rem;
+  font-size: 1.25rem;
+  width: 40rem;
+	height: calc(100%);
+	display: flex;
+	flex-direction: column;
+	overflow-y: auto;
+	overflow-x: hidden;
+	align-items: center;
+	margin-top: 2px;
+}
+
+.chatImage {
+  margin-right: 1rem;
+  width: 5rem;
+  border-radius: 10rem;
+}
+
+.chatMessage{
+  padding-top: 0rem;
+  display: flex;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  align-items: flex-end;
+  border-radius: 1rem;
+  background-color: transparent;
+  width: 30rem;
+  margin-bottom: 1rem;
 }
